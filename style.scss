@@ -1,0 +1,106 @@
+@import "./vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 1rem 2vw;
+  background: #333;
+  color: #aaa;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pie {
+  margin: 1rem;
+  width: $side;
+  height: $side;
+  border-radius: 50%;
+  animation: animate2 linear 3s infinite;
+}
+
+.pie1 {
+  background: conic-gradient(from 0deg,violet,indigo,blue,green,yellow,orange,red);
+}
+
+.pie2 {
+  background: conic-gradient($c1 0% 20%,$c2 0 30%,$color1 0 60%,$c3 0 75%,$c4 0);
+}
+
+.pie3 {
+  background: radial-gradient(#333 40%, transparent 41%),conic-gradient($c1 0% 20%, $c2 0 30%, $color1 0 60%, $c3 0 75%, $c4 0);
+}
+
+.pie4 {
+  background: conic-gradient($c1 0.01turn, $c2, $c3, $c4, $color1, $color2);
+}
+
+.pie5 {
+  background: #1af repeating-conic-gradient(hsla(0, 0%, 100%, 0.2) 0 15deg,hsla(0, 0%, 100%, 0) 0 30deg);
+}
+
+.pie6 {
+  background: conic-gradient(black 0 25%, white 0 50%, black 0 75%, white 0);
+  background-size: $side/4 $side/4;
+  border-radius: 0%;
+  animation: none;
+}
+
+.pie7 {
+  position: relative;
+  background: radial-gradient(#333 40%, transparent 41%),
+    conic-gradient(transparent 0, #b3defe 0 5deg, transparent 5deg),
+    conic-gradient(transparent 8deg, #a4d7fe 8deg 15deg, transparent 15deg),
+    conic-gradient(transparent 18deg, #95d1fe 18deg 27deg, transparent 27deg),
+    conic-gradient(transparent 30deg, #86cafd 30deg 41deg, transparent 41deg),
+    conic-gradient(transparent 44deg, #77c4fd 44deg 57deg, transparent 57deg),
+    conic-gradient(transparent 60deg, #67bdfd 60deg 75deg, transparent 75deg),
+    conic-gradient(transparent 78deg, #58b7fd 78deg 95deg, transparent 95deg),
+    conic-gradient(transparent 98deg, #49b0fd 98deg 117deg, transparent 117deg),
+    conic-gradient(transparent 120deg, #3aaafc 120deg 141deg, transparent 141deg),
+    conic-gradient(transparent 144deg, #2ba3fc 144deg 167deg, transparent 167deg),
+    conic-gradient(transparent 170deg, #1c9cfc 170deg 195deg, transparent 195deg),
+    conic-gradient(transparent 198deg, #0d96fc 198deg 225deg, transparent 225deg),
+    conic-gradient(transparent 228deg, #038ff6 228deg 257deg, transparent 257deg),
+    conic-gradient(transparent 260deg, #0386e7 260deg 291deg, transparent 291deg);
+
+  &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(290deg) translate(50%, -114%);
+      border: 3.2em solid transparent;
+      border-left-color: #0386e7;
+      background: linear-gradient(#0386e7, #0386e7) 0 50% no-repeat border-box;
+      background-size: 50% 1px;
+  }
+}
+
+.box1{
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(#000 3%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 30%),
+     conic-gradient(red, orange, lime, aqua, blue, magenta, red), 
+     radial-gradient(closest-side, #444 0, #444 1.1529215046%, #bbb 0, #bbb 1.4411518808%, #444 0, #444 1.8014398509%, #bbb 0, #bbb 2.2517998137%, #444 0, #444 2.8147497671%, #bbb 0, #bbb 3.5184372089%, #444 0, #444 4.3980465111%, #bbb 0, #bbb 5.4975581389%, #444 0, #444 6.8719476736%, #bbb 0, #bbb 8.589934592%, #444 0, #444 10.73741824%, #bbb 0, #bbb 13.4217728%, #444 0, #444 16.777216%, #bbb 0, #bbb 20.97152%, #444 0, #444 26.2144%, #bbb 0, #bbb 32.768%, #444 0, #444 40.96%, #bbb 0, #bbb 51.2%, #444 0, #444 64%, #bbb 0, #bbb 80%, #444 0, #444 100%), 
+     repeating-conic-gradient(#bbb 0 3.125%, #444 0 6.25%);
+    background-blend-mode: normal, multiply, exclusion, normal;
+    background-position: center center;
+    animation: animate2 linear infinite 6s;
+}
+
+@keyframes animate {
+    from {transform: rotate(-0.5turn);}
+    to {transform: rotate(0turn);}
+}
+
+@keyframes animate2 {
+    from {transform: rotate(0turn);}
+    to {transform: rotate(1turn);}
+}
