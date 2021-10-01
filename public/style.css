@@ -17,6 +17,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .pie {
@@ -75,6 +78,17 @@ body {
   background-size: 50% 1px;
 }
 
+.box1 {
+  height: 50vmax;
+  width: 50vmax;
+  border-radius: 50%;
+  background: radial-gradient(#000 3%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 30%), conic-gradient(red, orange, lime, aqua, blue, magenta, red), radial-gradient(closest-side, #444 0, #444 1.15292%, #bbb 0, #bbb 1.44115%, #444 0, #444 1.80144%, #bbb 0, #bbb 2.2518%, #444 0, #444 2.81475%, #bbb 0, #bbb 3.51844%, #444 0, #444 4.39805%, #bbb 0, #bbb 5.49756%, #444 0, #444 6.87195%, #bbb 0, #bbb 8.58993%, #444 0, #444 10.73742%, #bbb 0, #bbb 13.42177%, #444 0, #444 16.77722%, #bbb 0, #bbb 20.97152%, #444 0, #444 26.2144%, #bbb 0, #bbb 32.768%, #444 0, #444 40.96%, #bbb 0, #bbb 51.2%, #444 0, #444 64%, #bbb 0, #bbb 80%, #444 0, #444 100%), repeating-conic-gradient(#bbb 0 3.125%, #444 0 6.25%);
+  background-blend-mode: normal, multiply, exclusion, normal;
+  background-position: center center;
+  -webkit-animation: animate2 linear infinite 6s;
+          animation: animate2 linear infinite 6s;
+}
+
 @-webkit-keyframes animate {
   from {
     -webkit-transform: rotate(-0.5turn);
@@ -117,15 +131,4 @@ body {
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
   }
-}
-
-.box1 {
-  height: 50vw;
-  width: 50vw;
-  border-radius: 50%;
-  background: radial-gradient(#000 3%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 30%), conic-gradient(red, orange, lime, aqua, blue, magenta, red), radial-gradient(closest-side, #444 0, #444 1.15292%, #bbb 0, #bbb 1.44115%, #444 0, #444 1.80144%, #bbb 0, #bbb 2.2518%, #444 0, #444 2.81475%, #bbb 0, #bbb 3.51844%, #444 0, #444 4.39805%, #bbb 0, #bbb 5.49756%, #444 0, #444 6.87195%, #bbb 0, #bbb 8.58993%, #444 0, #444 10.73742%, #bbb 0, #bbb 13.42177%, #444 0, #444 16.77722%, #bbb 0, #bbb 20.97152%, #444 0, #444 26.2144%, #bbb 0, #bbb 32.768%, #444 0, #444 40.96%, #bbb 0, #bbb 51.2%, #444 0, #444 64%, #bbb 0, #bbb 80%, #444 0, #444 100%), repeating-conic-gradient(#bbb 0 3.125%, #444 0 6.25%);
-  background-blend-mode: normal, multiply, exclusion, normal;
-  background-position: center center;
-  -webkit-animation: animate2 linear infinite 6s;
-          animation: animate2 linear infinite 6s;
 }
