@@ -9,6 +9,7 @@ body {
   padding: 1rem 2vw;
   background: #333;
   color: #aaa;
+  overflow-x: hidden;
 }
 
 .box {
@@ -50,6 +51,15 @@ body {
   background-size: $side/4 $side/4;
   border-radius: 0%;
   animation: none;
+}
+
+.pie8 {
+    // background: radial-gradient(#333 40%, transparent 41%), 
+    //     repeating-conic-gradient(#f000 0 2deg, red 2deg 28deg, #f000 28deg 32deg, #f00a 32deg 58deg, #f000 58deg 60deg);
+    background: radial-gradient(#333 40%, transparent 41%), 
+        repeating-conic-gradient(#f000 0, #f005 0 25deg, transparent 25deg 30deg);
+        
+    animation: none;
 }
 
 .pie7 {

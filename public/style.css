@@ -9,6 +9,7 @@ body {
   padding: 1rem 2vw;
   background: #333;
   color: #aaa;
+  overflow-x: hidden;
 }
 
 .box {
@@ -55,6 +56,12 @@ body {
   background: conic-gradient(black 0 25%, white 0 50%, black 0 75%, white 0);
   background-size: 75px 75px;
   border-radius: 0%;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.pie8 {
+  background: radial-gradient(#333 40%, transparent 41%), repeating-conic-gradient(#f000 0, #f005 0 25deg, transparent 25deg 30deg);
   -webkit-animation: none;
           animation: none;
 }
